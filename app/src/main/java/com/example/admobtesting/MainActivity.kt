@@ -31,8 +31,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.tvbtn).text=BuildConfig.AD_ID
 
         val adRequest= AdRequest.Builder().build()
-
-        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest, object : InterstitialAdLoadCallback() {
+        InterstitialAd.load(this,resources.getString(R.string.INTERSTITIAL_ADD_ID), adRequest, object : InterstitialAdLoadCallback() {
             override fun onAdFailedToLoad(adError: LoadAdError) {
                 Log.d("messi3", "Interstial error")
                 mInterstitialAd = null
